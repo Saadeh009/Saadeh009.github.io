@@ -1,0 +1,215 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url(./images/Glamping_Dome_2.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+nav {
+  display: flex;
+  padding: 2% 5%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav img {
+  width: 150px;
+}
+
+.nav-links {
+  flex: 1; /* will wake the whole row fill space */
+  text-align: right;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.nav-links ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+#globe {
+  display: inline-block;
+  color: grey;
+  border: 3px solid white;
+  border-radius: 25px;
+  padding: 8px;
+  position: relative;
+  margin: 8px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.barsANDuser {
+  display: inline-block;
+  color: grey;
+  border: 3px solid white;
+  border-radius: 25px;
+  padding: 8px;
+  position: relative;
+  margin: 8px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: white;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.nav-links ul li:hover::after {
+  width: 15%;
+}
+.options-query {
+  width: 80%;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -110%);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  border: 5px solid white;
+  border-radius: 25px;
+  background: rgb(233, 211, 211);
+}
+.Options {
+  flex: auto;
+  display: inline-block;
+  text-decoration: none;
+  color: rgb(5, 5, 7);
+  border: 5px solid white;
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: bold;
+  background: white;
+  cursor: pointer;
+}
+
+#magnifying-glass {
+  flex: auto;
+  background-color: rgb(223, 94, 94);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.text-box {
+  width: 90%;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -65%);
+  text-align: center;
+}
+
+.text-box h1 {
+  font-size: 36px;
+}
+.hero-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: rgb(51, 51, 255);
+  border: 2px solid white;
+  border-radius: 25px;
+  padding: 12px 34px;
+  font-size: 15px;
+  font-weight: bold;
+  background: white;
+  position: relative;
+  cursor: pointer;
+}
+
+#heart {
+  visibility: hidden;
+}
+
+.gift {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url(./images/Gift_Cards.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
+}
+.gift img {
+  margin: 10px;
+}
+
+/* Media queries */
+/*
+*
+*
+*
+*
+*/
+
+@media (max-width: 700px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  nav img {
+    display: none;
+  }
+
+  .nav-links {
+    position: absolute;
+    background: #ffffff;
+    height: 6vh;
+    width: 100vw;
+    bottom: 0;
+    flex: 1;
+  }
+
+  .nav-links ul li {
+    display: inline-block;
+  }
+  .nav-links ul li a {
+    display: none;
+  }
+
+  #heart {
+    visibility: visible;
+    cursor: pointer;
+    padding-right: 100px;
+    border: 9px solid white;
+    border-radius: 25px;
+    background-color: white;
+  }
+
+  #bars1 {
+    display: none;
+  }
+
+  /*Search tab */
+  .options-query {
+    transform: translate(-10%, -380%);
+    position: sticky;
+  }
+
+  .Options {
+    visibility: hidden;
+  }
+  #magnifying-glass {
+    visibility: visible;
+  }
+}
