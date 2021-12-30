@@ -140,6 +140,8 @@ nav img {
   visibility: hidden;
 }
 
+/* Gift cards */
+
 .gift {
   min-height: 100vh;
   width: 100%;
@@ -156,6 +158,14 @@ nav img {
   background-repeat: no-repeat;
   transform: translate(5%, 5%);
 }
+.shopnow-text {
+  text-align: center;
+  transform: translate(-28%, 90%);
+  font-size: 22px;
+}
+.shopnow-text h1 {
+  font-size: 50px;
+}
 
 .shop-btn {
   text-decoration: none;
@@ -168,6 +178,193 @@ nav img {
   background: black;
   position: relative;
   cursor: pointer;
+}
+
+/* Inspiration for next trip */
+
+.inspiration {
+  min-height: 75vh;
+  width: 100vw;
+}
+
+.inspiration-text h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+
+.inspiration-loc {
+  display: flex;
+  align-items: stretch;
+}
+.inspiration-loc img {
+  margin: 5px;
+}
+
+.inspiration-options {
+  display: flex;
+  justify-content: stretch;
+  transform: translate(2.2%, 0%);
+}
+
+.inspiration-options a {
+  margin-top: -6px;
+  text-decoration: none;
+  color: white;
+  margin: 7px;
+}
+#gradient-1 {
+  padding: 30px 120px;
+  background-color: red;
+  font-size: larger;
+  background-image: linear-gradient(red, rgb(255, 83, 83));
+}
+#gradient-2 {
+  padding: 30px 120px;
+  background-color: blue;
+  font-size: larger;
+  background-image: linear-gradient(blue, rgb(75, 75, 247));
+}
+#gradient-3 {
+  padding: 30px 120px;
+  background-color: green;
+  font-size: larger;
+  background-image: linear-gradient(green, rgb(41, 128, 41));
+}
+#gradient-4 {
+  padding: 30px 120px;
+  background-color: yellow;
+  font-size: larger;
+  background-image: linear-gradient(yellow, rgb(184, 184, 2));
+}
+
+/* Discovery from home & trips */
+
+.discovery {
+  min-height: 100vh;
+  width: 90vw;
+}
+
+.discovery-layout {
+  display: flex;
+  justify-content: space-between;
+}
+
+.discovery-1 {
+  min-height: 70vh;
+  width: 45vw;
+  margin-left: 10px;
+  background-image: url(./images/thingsForTrip.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.discovery-1-content {
+  transform: translate(10%, 10%);
+}
+.discovery-1 h1 {
+  color: white;
+}
+
+.experiences-btn {
+  text-decoration: none;
+  text-align: right;
+  color: black;
+  font-weight: bold;
+  border: 3px solid white;
+  padding: 12px 34px;
+  background-color: white;
+  border-radius: 9px;
+}
+
+.discovery-2 {
+  min-height: 70vh;
+  width: 45vw;
+  margin-left: 100px;
+  background-image: url(./images/ThingsForHome.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.discovery-2-content {
+  transform: translate(10%, 10%);
+}
+
+.discovery-2 h1 {
+  color: white;
+}
+
+.online-experiences-btn {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  border: 3px solid white;
+  padding: 12px 34px;
+  background-color: white;
+  border-radius: 9px;
+}
+
+/* Future getaways */
+
+.future-getaways {
+  min-height: 50vh;
+  width: 100vw;
+}
+.getaways-options {
+  display: flex;
+  justify-content: space-between;
+}
+.getaways-options a {
+  text-decoration: none;
+  color: black;
+}
+
+#artsandculture {
+  text-decoration: underline;
+}
+
+.cities-options {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Footer */
+
+.footer {
+  min-height: 50vh;
+  width: 100vw;
+  background-color: rgb(241, 241, 241);
+}
+.contact-options {
+  display: flex;
+  justify-content: space-between;
+}
+.contact-options a {
+  text-decoration: none;
+  color: black;
+}
+
+.help-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*
+*
+Links
+*
+*/
+
+.links {
+  min-height: 5vh;
+  width: 100vw;
+  background-color: rgb(241, 241, 241);
+}
+
+.link-options {
+  display: flex;
+  justify-content: space-between;
+}
+.link-options a {
+  text-decoration: none;
+  color: gray;
 }
 
 /* Media queries */
