@@ -2,10 +2,11 @@
   padding: 0;
   margin: 0;
   font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
 .header {
   min-height: 100vh;
-  width: 100%;
+  width: 100vw;
   background-image: url(./images/Glamping_Dome_2.jpg);
   background-position: center;
   background-size: cover;
@@ -38,6 +39,11 @@ nav img {
   color: white;
   text-decoration: none;
   font-size: 15px;
+}
+
+.nav-links .center-nav {
+  transform: translate(-30%, 0%);
+  display: inline-block;
 }
 
 #globe {
@@ -76,6 +82,13 @@ nav img {
 .nav-links ul li:hover::after {
   width: 15%;
 }
+
+.nav-links ul :hover {
+  content: "";
+  color: #e4b5b580;
+  transition: 0.3s;
+}
+
 .options-query {
   width: 80%;
   position: absolute;
@@ -102,11 +115,16 @@ nav img {
   cursor: pointer;
 }
 
-#magnifying-glass {
-  flex: auto;
-  background-color: rgb(223, 94, 94);
-  border-radius: 6px;
-  cursor: pointer;
+a.Options:hover {
+  background-color: rgb(212, 212, 212);
+  border: 5px solid rgb(212, 212, 212);
+  transition: 0.3s;
+}
+
+#magnifying-glass.Options {
+  background: rgb(223, 94, 94);
+  border: rgb(223, 94, 94);
+  border-radius: 9px;
 }
 
 .text-box {
@@ -144,14 +162,14 @@ nav img {
 
 .gift {
   min-height: 100vh;
-  width: 100%;
+  width: 100vw;
   background-color: black;
 }
 
 .shopnow {
   min-height: 90vh;
   width: 90vw;
-  background-image: url(./images/Gift_Cards.png);
+  background-image: url("./images/Gift_Cards.png");
   background-position: center;
   background-size: cover;
   position: relative;
@@ -160,7 +178,7 @@ nav img {
 }
 .shopnow-text {
   text-align: center;
-  transform: translate(-28%, 90%);
+  transform: translate(-28%, 70%);
   font-size: 22px;
 }
 .shopnow-text h1 {
@@ -170,14 +188,19 @@ nav img {
 .shop-btn {
   text-decoration: none;
   color: white;
-  border: 2px solid black;
+  border: 2px solid rgb(29, 27, 27);
   border-radius: 5px;
   padding: 12px 34px;
   font-size: 15px;
   font-weight: bold;
-  background: black;
+  background: rgb(29, 27, 27);
   position: relative;
   cursor: pointer;
+}
+a.shop-btn:hover {
+  background: black;
+  border: 2px solid black;
+  transition: 0.2s;
 }
 
 /* Inspiration for next trip */
@@ -187,23 +210,23 @@ nav img {
   width: 100vw;
 }
 
+.inspiration #hor-line {
+  max-width: 85vw;
+}
+
 .inspiration-text h2 {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
 }
 
-.inspiration-loc {
-  display: flex;
-  align-items: stretch;
-}
-.inspiration-loc img {
-  margin: 5px;
+.inspiration-loc a {
+  display: inline-flex;
+  align-items: center;
 }
 
 .inspiration-options {
-  display: flex;
-  justify-content: stretch;
-  transform: translate(2.2%, 0%);
+  display: inline-flex;
+  flex-wrap: wrap;
 }
 
 .inspiration-options a {
@@ -212,26 +235,30 @@ nav img {
   color: white;
   margin: 7px;
 }
+.inspiration-options a span {
+  font-style: italic;
+  font-size: 16px;
+}
 #gradient-1 {
-  padding: 30px 120px;
+  padding: 30px 95px;
   background-color: red;
   font-size: larger;
   background-image: linear-gradient(red, rgb(255, 83, 83));
 }
 #gradient-2 {
-  padding: 30px 120px;
+  padding: 30px 95px;
   background-color: blue;
   font-size: larger;
   background-image: linear-gradient(blue, rgb(75, 75, 247));
 }
 #gradient-3 {
-  padding: 30px 120px;
+  padding: 30px 95px;
   background-color: green;
   font-size: larger;
   background-image: linear-gradient(green, rgb(41, 128, 41));
 }
 #gradient-4 {
-  padding: 30px 120px;
+  padding: 30px 95px;
   background-color: yellow;
   font-size: larger;
   background-image: linear-gradient(yellow, rgb(184, 184, 2));
@@ -242,6 +269,10 @@ nav img {
 .discovery {
   min-height: 100vh;
   width: 90vw;
+}
+
+.discovery #discovery-discover {
+  transform: translate(1%, 0);
 }
 
 .discovery-layout {
@@ -269,10 +300,16 @@ nav img {
   text-align: right;
   color: black;
   font-weight: bold;
-  border: 3px solid white;
+  border: 1px solid white;
   padding: 12px 34px;
   background-color: white;
   border-radius: 9px;
+}
+
+a.experiences-btn:hover {
+  background-color: rgb(160, 160, 160);
+  border: 1px solid rgb(160, 160, 160);
+  transition: 0.3s;
 }
 
 .discovery-2 {
@@ -295,17 +332,23 @@ nav img {
   text-decoration: none;
   color: black;
   font-weight: bold;
-  border: 3px solid white;
+  border: 1px solid white;
   padding: 12px 34px;
   background-color: white;
   border-radius: 9px;
 }
 
+a.online-experiences-btn:hover {
+  background-color: rgb(160, 160, 160);
+  border: 1px solid rgb(160, 160, 160);
+  transition: 0.3s;
+}
+
 /* Future getaways */
 
 .future-getaways {
-  min-height: 50vh;
-  width: 100vw;
+  min-height: 45vh;
+  width: 95vw;
 }
 .getaways-options {
   display: flex;
@@ -313,6 +356,11 @@ nav img {
 }
 .getaways-options a {
   text-decoration: none;
+  color: rgb(65, 51, 51);
+  font-weight: bolder;
+}
+
+.getaways-options #artsandculture {
   color: black;
 }
 
@@ -325,12 +373,23 @@ nav img {
   justify-content: space-between;
 }
 
+.cities-options h3 {
+  color: rgb(66, 66, 66);
+  font-style: italic;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.future-getaways hr {
+  font-weight: lighter;
+}
+
 /* Footer */
 
 .footer {
-  min-height: 50vh;
-  width: 100vw;
-  background-color: rgb(241, 241, 241);
+  min-height: 35vh;
+  width: 95vw;
+  background-color: rgba(241, 241, 241, 0.9);
 }
 .contact-options {
   display: flex;
@@ -353,18 +412,22 @@ Links
 */
 
 .links {
-  min-height: 5vh;
-  width: 100vw;
-  background-color: rgb(241, 241, 241);
-}
-
-.link-options {
   display: flex;
+  min-height: 7vh;
+  width: 95vw;
+  background-color: rgba(241, 241, 241, 0.808);
   justify-content: space-between;
 }
-.link-options a {
+
+.link-options-text {
+  transform: translate(0%, 40%);
+  display: flex;
+  text-align: left;
+}
+.link-options-text a {
   text-decoration: none;
   color: gray;
+  margin-left: 15px;
 }
 
 /* Media queries */

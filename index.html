@@ -18,17 +18,19 @@
 <section class="header">
   <nav>
     <a href="#"> <img src="./images/Airbnb_Logo_Navbar.png" alt=""></a>
-     <div class="nav-links">
+     <div class="nav-links" id="navLinks">
       
       <ul>
-        <li> <a href="#">Places to stay</a> </li>
-        <li> <a href="#">Online Experiences</a></li>
-        <li><a href="#">Experiences</a></li>
+        <div class="center-nav">
+          <li> <a href="#">Places to stay</a> </li>
+          <li> <a href="#">Online Experiences</a></li>
+          <li> <a href="#">Experiences</a></li>
+        </div>
         <li><a href="#">Become a host</a></li>
     
         <i class="fa fa-globe fa-lg" id="globe"></i>
         <div class="barsANDuser">
-          <i class="fa fa-bars fa-lg" id="bars1"></i>
+          <i class="fa fa-bars fa-lg" id="bars1" onclick="showMenu()"></i>
           <i class="fa fa-user-circle fa-lg" ></i>         
         </div>
         <i class="fa fa-heart-o fa-lg" id="heart"></i>
@@ -40,10 +42,10 @@
 
   <div class="options-query">
     <a class="Options" href="#" id="optionsLoc">Location</a>
-    <a class="Options href="#" id="optionsCheck-in">Check-in</a>
+    <a class="Options" href="#" id="optionsCheck-in">Check-in</a>
     <a class="Options" href="#" id="optionsCheck-out">Check-out</a>
     <a class="Options" href="#" id="guests">Guests</a>
-    <i class="fa fa-search fa-lg" id="magnifying-glass"></i>
+    <a class="Options" href="#" id="magnifying-glass" ><i class="fa fa-search fa-lg" ></i></a>
     <a class="Options" href="#" id="whereRUgoing " style="display:none;" >Where are you going?</a>
   </div>
 
@@ -72,7 +74,7 @@
  <section class="inspiration">
   <div class="inspiration-text">
     <h2>Inspiration for your next trip </h2>
-    <hr>
+    <hr id="hor-line">
     <br>
   </div>
      <div class="inspiration-loc">     
@@ -81,17 +83,20 @@
       <a  href="#"><img src="./images/batroun.png" alt=""></a>
       <a  href="#"><img src="./images/batroun1.png" alt=""></a>
      </div>
-     <div class="inspiration-options">
-      <a href="#" id="gradient-1">Beirut <br> <br> 3km away</a>
-      <a href="#" id="gradient-2">Beirut <br><br> 2km away</a>
-      <a href="#" id="gradient-3">Batroun <br><br> 13km away</a>
-      <a href="#" id="gradient-4">Batroun <br><br> 12km away</a>
+     <div class="inspiration-options"> 
+      <a href="#" id="gradient-1">Beirut <br> <span>3km away</span> </a>
+      <a href="#" id="gradient-2">Beirut <br><span>2km away</span> </a>
+      <a href="#" id="gradient-3">Batroun <br><span>13km away</span></a>
+      <a href="#" id="gradient-4">Batroun <br><span>12km away</span> </a>
 
      </div>
  </section>
 
  <section class="discovery">
-  <h1>Discover Airbnb Experiences</h1>
+   <br>
+   <br>
+  <h1 id="discovery-discover">Discover Airbnb Experiences</h1>
+  <br>
   <div class="discovery-layout">
    <div class="discovery-1">
     <div class="discovery-1-content">
@@ -131,31 +136,33 @@
   </div>
   
   <br>
-
+ <hr>
+ <br>
   <div class="cities-options">
+  
 
     <div class="cities-col-1">
-      <h3>Zalka</h3>
-      <h3>Jal el dib</h3>
-      <h3>Antelias</h3>
+      <h3>Zalka</h3><br>
+      <h3>Jal el dib</h3><br>
+      <h3>Antelias</h3><br>
     </div>
 
     <div class="cities-col-2">
-    <h3>Dawra</h3>
-    <h3>Jdeideh</h3>
-    <h3>Dekweneh</h3>
+    <h3>Dawra</h3><br>
+    <h3>Jdeideh</h3><br>
+    <h3>Dekweneh</h3><br>
     </div>
 
     <div class="cities-col-3">
-    <h3>Hamra</h3>
-    <h3>Salim Slem</h3>
-    <h3>Verdun</h3>
+    <h3>Hamra</h3><br>
+    <h3>Salim Slem</h3><br>
+    <h3>Verdun</h3><br>
     </div>
 
     <div class="cities-col-4">
-    <h3>Baalbeck</h3>
-    <h3>Naqoura</h3>
-    <h3>Jiyyeh</h3>
+    <h3>Baalbeck</h3><br>
+    <h3>Naqoura</h3><br>
+    <h3>Jiyyeh</h3><br>
     </div>
 
   </div>
@@ -218,22 +225,38 @@
     </div>
 
   </div>
+  <br>
   <hr>
 </section>
+
 
 <!-- Links -->
 
 <section class="links">
-  
-  <div class="link-options">
+  <div class="link-options-text">
     <a href="#"> Airbnb,inc</a>
     <a href="#">Privacy</a>
     <a href="#">Terms</a>
     <a href="#">Sitemap</a>
   </div>
+  <div class="link-options-icons">
+    <a href="#"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a>
+
+  </div>
   
 </section>
+
+<!-- Future JavaScript imPlementation-->
+<script>
+  var navLinks = document.getElementById("navLinks");
+
+  function showMenu() {
+
+  }
+</script>
+
  
 </body>
 
 </html>
+
