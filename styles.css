@@ -70,6 +70,10 @@ nav img {
   background-color: white;
 }
 
+.barsANDuser #bars1 {
+  margin-right: 5px;
+}
+
 .nav-links ul li::after {
   content: "";
   width: 0%;
@@ -88,6 +92,27 @@ nav img {
   color: #e4b5b580;
   transition: 0.3s;
 }
+
+.nav-links ul .barsANDuser :hover {
+  color: black;
+}
+
+.sub-menu {
+  display: none;
+}
+
+.barsANDuser:hover .sub-menu {
+  display: block;
+}
+
+.barsANDuser:hover .sub-menu a {
+  color: grey;
+}
+.barsANDuser:hover .sub-menu a:hover {
+  color: black;
+}
+
+/* Options Query */
 
 .options-query {
   width: 80%;
@@ -119,6 +144,31 @@ a.Options:hover {
   background-color: rgb(212, 212, 212);
   border: 5px solid rgb(212, 212, 212);
   transition: 0.3s;
+}
+
+#options-date-time {
+  display: none;
+}
+
+#options-date-time2 {
+  display: none;
+}
+
+#optionsCheck-in {
+  text-decoration: none;
+  color: black;
+}
+
+#optionsCheck-out {
+  text-decoration: none;
+  color: black;
+}
+
+#optionscheckinMain:hover #options-date-time {
+  display: block;
+}
+#optionscheckinMain2:hover #options-date-time2 {
+  display: block;
 }
 
 #magnifying-glass.Options {
@@ -393,16 +443,24 @@ a.online-experiences-btn:hover {
 }
 .contact-options {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 .contact-options a {
   text-decoration: none;
   color: black;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .help-list {
   display: flex;
   justify-content: space-between;
+}
+
+.help-list h3 {
+  font-weight: 300;
+  font-size: 1.1em;
+  cursor: pointer;
 }
 
 /*
@@ -412,22 +470,35 @@ Links
 */
 
 .links {
-  display: flex;
   min-height: 7vh;
   width: 95vw;
   background-color: rgba(241, 241, 241, 0.808);
+}
+
+.links-container {
+  display: flex;
   justify-content: space-between;
 }
 
 .link-options-text {
   transform: translate(0%, 40%);
-  display: flex;
   text-align: left;
 }
+
 .link-options-text a {
   text-decoration: none;
   color: gray;
   margin-left: 15px;
+}
+
+.link-options-icons {
+  display: flex;
+  width: 10%;
+  justify-content: space-evenly;
+}
+.link-options-icons i {
+  margin-right: 10px;
+  margin-top: 10px;
 }
 
 /* Media queries */

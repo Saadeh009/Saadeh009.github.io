@@ -11,6 +11,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="styles-inspiration.css">
+
+<!--flatpickr-->
+
+
 </head>
 
 <body>
@@ -30,8 +35,15 @@
     
         <i class="fa fa-globe fa-lg" id="globe"></i>
         <div class="barsANDuser">
-          <i class="fa fa-bars fa-lg" id="bars1" onclick="showMenu()"></i>
-          <i class="fa fa-user-circle fa-lg" ></i>         
+          <i class="fa fa-bars fa-lg" id="bars1"></i>
+          <i class="fa fa-user-circle fa-lg" ></i>
+          <div class="sub-menu">
+            <ul>
+              <li><a href="#">sign up</a></li>
+              <li><a href="#">log in</a></li>
+              <li><a href="#">about us</a></li>
+            </ul>
+          </div>         
         </div>
         <i class="fa fa-heart-o fa-lg" id="heart"></i>
         
@@ -42,8 +54,24 @@
 
   <div class="options-query">
     <a class="Options" href="#" id="optionsLoc">Location</a>
-    <a class="Options" href="#" id="optionsCheck-in">Check-in</a>
-    <a class="Options" href="#" id="optionsCheck-out">Check-out</a>
+    <div class="Options" id="optionscheckinMain" >
+      <a  href="#" id="optionsCheck-in">Check-in</a>
+      <form action=""  id="options-date-time">
+        <input type="date">
+        <button>submit</button>
+      </form>
+
+    </div>
+    <div class="Options" id="optionscheckinMain2">
+      <a  href="#" id="optionsCheck-out">Check-out</a>
+      <form action="" id="options-date-time2">
+        <input type="date">
+        <button>submit</button>
+      </form>
+    
+    </div>
+
+    
     <a class="Options" href="#" id="guests">Guests</a>
     <a class="Options" href="#" id="magnifying-glass" ><i class="fa fa-search fa-lg" ></i></a>
     <a class="Options" href="#" id="whereRUgoing " style="display:none;" >Where are you going?</a>
@@ -63,7 +91,10 @@
       <h4>Introducing </h4>
       <h1>Airbnb <br>Gift Cards</h1>
       <br>
-      <a class="shop-btn" href="#">Shop now</a>
+      <a class="shop-btn" href="##" id="shopbtn" >Shop now</a>
+      <form action="">
+        <input type="text" id="shopbtn-input">
+      </form>
     </div>
   </div>
  </section>
@@ -233,26 +264,59 @@
 <!-- Links -->
 
 <section class="links">
+  <div class="links-container">
   <div class="link-options-text">
     <a href="#"> Airbnb,inc</a>
     <a href="#">Privacy</a>
     <a href="#">Terms</a>
     <a href="#">Sitemap</a>
   </div>
-  <div class="link-options-icons">
-    <a href="#"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a>
+  <div class="links-options-usd">
+    <a href="#"><i class="fa fa-globe fa-lg" id="globe"></i> English (US)</a>
+    <a href="#"><i class="fa fa-usd fa-lg" ></i> USD</a>
+
 
   </div>
+  <div class="link-options-icons">
+    <a href="#"><i class="fa fa-instagram fa-lg" ></i></a>
+    <a href="#"><i class="fa fa-facebook fa-lg" ></i></a>
+    <a href="#"><i class="fa fa-twitter fa-lg" ></i></a> 
+  </div>
+  </div>
+  
   
 </section>
+<!---
+<section class="inspiartion2">
+  <div class="inspiration2-img">1</div>
+  <div class="inspiration2-img">2</div>
+  <div class="inspiration2-img">3</div>
+  <div class="inspiration2-img">4</div>
+  <div class="inspiration2-img">5</div>
+  <div class="inspiration2-img">6</div>
+  <div class="inspiration2-img">7</div>
+  <div class="inspiration2-img">8</div>
 
-<!-- Future JavaScript imPlementation-->
+
+</section>
+--!>
+<!-- Future JavaScript implementation-->
+
+
+
 <script>
-  var navLinks = document.getElementById("navLinks");
-
-  function showMenu() {
-
-  }
+  const shopnowbtn = document.getElementById("shopbtn");
+  const shopnowinput = document.getElementById("shopbtn-input");
+  shopnowinput.style.display = "none";
+  shopnowbtn.addEventListener("click" , (event) => {
+    if (shopnowinput.style.display == "none") {
+       shopnowinput.style.display = "block";
+    }
+    else {
+      shopnowinput.style.display = "none";
+    }
+  })
+  
 </script>
 
  
