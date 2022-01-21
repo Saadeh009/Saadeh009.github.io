@@ -1,2 +1,2 @@
-# GargantuanDickAbdSalam
-AirBnb Clone
+# README
+Will soon add backend
