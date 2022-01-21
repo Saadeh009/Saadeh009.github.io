@@ -6,15 +6,15 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Airbnb: Vacations, Rentals,Cabins & more</title>
  <link rel="stylesheet" href="styles.css">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="styles-inspiration.css">
+
 
 <!--flatpickr-->
 
@@ -24,6 +24,30 @@
 <body>
  
 <section class="header">
+
+  <section class="fixed">
+  <div class="Options2">
+    <div class="search-glass2"><i class="fa fa-search fa-lg"></i> </div>
+    <div class="optionsquestion">
+      <p>Where are you going?</p>
+    </div>
+  </div>
+  <div class="responsivenavbar">
+    <div class="search">
+      <i class="fa fa-search fa-lg"></i>
+      <p>Explore</p>
+    </div>
+    <div class="heart">
+      <i class="fa fa-heart-o fa-lg" id="heart"></i>
+      <p>Wish Lists</p>
+    </div>
+    <div class="user">
+      <i class="fa fa-user-circle fa-lg"></i>
+      <p>Log in</p>
+    </div>
+  </div>
+</section>  
+
   <nav>
     <a href="#"> <img src="./images/Airbnb_Logo_Navbar.png" alt=""></a>
      <div class="nav-links" id="navLinks">
@@ -48,38 +72,36 @@
             </ul>
           </div>         
         </div>
-        <i class="fa fa-heart-o fa-lg" id="heart"></i>
         
       </ul>
      </div>
    
   </nav>
-
-  <div class="options-query">
-    <a class="Options" href="#" id="optionsLoc">Location</a>
-    <div class="Options" id="optionscheckinMain" >
-      <a  href="#" id="optionsCheck-in">Check-in</a>
-      <form action=""  id="options-date-time">
-        <input type="date">
-        <button>submit</button>
-      </form>
-
+ <div class="Options-container">
+  <div class="Options">
+    <div class="options-1">
+      <p>Location <br> <span>Where are you going?</span></p>
     </div>
-    <div class="Options" id="optionscheckinMain2">
-      <a  href="#" id="optionsCheck-out">Check-out</a>
-      <form action="" id="options-date-time2">
-        <input type="date">
-        <button>submit</button>
-      </form>
-    
+    <div class="options-2">
+      <p>Check in <br> <span>Add Dates</span></p>
+        <label for="checkintime"></label>
+          <input type="datetime-local" class="datetime1" id="checkintime" name="checkintime">
+        
     </div>
-
-    
-    <a class="Options" href="#" id="guests">Guests</a>
-    <a class="Options" href="#" id="magnifying-glass" ><i class="fa fa-search fa-lg" ></i></a>
-    <a class="Options" href="#" id="whereRUgoing " style="display:none;" >Where are you going?</a>
+    <div class="options-3">
+      <p>Check out <br> <span>Add Dates</span></p>
+      <label for="checkouttime"></label>
+       <input type="datetime-local" class="datetime2" id="checkouttime" name="checkouttime">
+    </div>
+    <div class="options-4">
+      <div>
+        <p>Guests <br> <span>Add Guests</span></p>
+      </div>
+      <div class="search-glass"><i class="fa fa-search fa-lg"></i></div>
+    </div>
   </div>
-
+ </div>
+  
   <div class="text-box">
     <h1>Not sure where to go? Perfect.</h1>
     <a class="hero-btn" href="#">I'm flexible</a>
@@ -94,12 +116,13 @@
       <h4>Introducing </h4>
       <h1>Airbnb <br>Gift Cards</h1>
       <br>
-      <a class="shop-btn" href="##" id="shopbtn" >Shop now</a>
-      <form action="">
-        <input type="text" id="shopbtn-input">
-      </form>
+      <a class="shop-btn" href="#" id="shopbtn" >Shop now</a>
+
     </div>
   </div>
+ </section>
+ <section class="responsivegift">
+   
  </section>
 <br>
 <br>
@@ -174,21 +197,17 @@
   <br>
   <div class="discovery-layout">
    <div class="discovery-1">
-    <div class="discovery-1-content">
       <h1>Things to do<br>on your trip</h1>
       <br>
       <a href="#" class="experiences-btn">Experiences</a>
     </div>
       
-   </div>
+
 
    <div class="discovery-2">
-    <div class="discovery-2-content">
     <h1>Things to do<br>from home</h1>
     <br>
     <a href="#" class="online-experiences-btn">Online Experiences</a>
-
-    </div>
      
    </div>
 
@@ -234,11 +253,7 @@
     <h3>Verdun</h3><br>
     </div>
 
-    <div class="cities-col-4">
-    <h3>Baalbeck</h3><br>
-    <h3>Naqoura</h3><br>
-    <h3>Jiyyeh</h3><br>
-    </div>
+    
 
   </div>
 </section>
@@ -248,29 +263,15 @@
 
 <section class="footer">
   
-  <hr>
   <br>
   <div class="contact-options">
-    <a href="#" >
-      <h4>Support</h4>
-    </a>
-    <a href="#">
-      <h4>Community</h4>
-    </a>
-    <a href="#">
-      <h4>Hosting</h4>
-    </a>
-    <a href="#">
-      <h4>About</h4>
-    </a>
     
-  </div>
 
-  <br>
-
-  <div class="help-list">
 
     <div class="help-col-1">
+      <a href="#">
+        <h4>Support</h4>
+      </a>
       <h3>Help Center</h3>
       <h3>Safety information</h3>
       <h3>Cancellation options</h3>
@@ -278,6 +279,9 @@
     </div>
 
     <div class="help-col-2">
+      <a href="#">
+        <h4>Community</h4>
+      </a>
       <h3>Airbnb.org: disaster relief housing</h3>
       <h3>Support Afghan refugees</h3>
       <h3>Celebrating diversity & belonging</h3>
@@ -285,6 +289,9 @@
     </div>
 
     <div class="help-col-3">
+      <a href="#">
+        <h4>Hosting</h4>
+      </a>
       <h3>Try hosting</h3>
       <h3>AirCover: protection for Hosts</h3>
       <h3>Explore hosting resources</h3>
@@ -293,6 +300,9 @@
     </div>
 
     <div class="help-col-4">
+      <a href="#">
+        <h4>About</h4>
+      </a>
       <h3>Newsroom</h3>
       <h3>Learn about new features</h3>
       <h3>Letter from our founders</h3>
@@ -308,9 +318,8 @@
 <!-- Links -->
 
 <section class="links">
-  <div class="links-container">
   <div class="link-options-text">
-    <a href="#"> Airbnb,inc</a>
+    <a href="#"> &copy;2022 Airbnb,inc</a>
     <a href="#">Privacy</a>
     <a href="#">Terms</a>
     <a href="#">Sitemap</a>
@@ -321,12 +330,12 @@
 
 
   </div>
-  <div class="link-options-icons">
+  <div class="links-options-icons">
     <a href="#"><i class="fa fa-instagram fa-lg" ></i></a>
     <a href="#"><i class="fa fa-facebook fa-lg" ></i></a>
     <a href="#"><i class="fa fa-twitter fa-lg" ></i></a> 
   </div>
-  </div>
+
   
   
 </section>
@@ -349,19 +358,22 @@
 
 
 <script>
-  const shopnowbtn = document.getElementById("shopbtn");
-  const shopnowinput = document.getElementById("shopbtn-input");
-  shopnowinput.style.display = "none";
-  shopnowbtn.addEventListener("click" , (event) => {
-    if (shopnowinput.style.display == "none") {
-       shopnowinput.style.display = "block";
-    }
-    else {
-      shopnowinput.style.display = "none";
-    }
+  const thingToClick = document.querySelector(".barsANDuser");
+  const menu = document.querySelector(".sub-menu");
+
+  thingToClick.addEventListener('click', function () {
+  menu.classList.toggle('click');
   })
+  /*
+  const thingToClick1 = document.querySelector(".options-2");
+  const datetime = document.querySelector("input#checkintime");
   
+  thingToClick1.addEventListener('click', function () {
+  datetime.classList.toggle('click');
+  })
+  */
 </script>
+
 
  
 </body>

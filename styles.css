@@ -4,19 +4,91 @@
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }
+
 .header {
-  min-height: 100vh;
+  min-height: 120vh;
   width: 100vw;
   background-image: url(./images/Glamping_Dome_2.jpg);
   background-position: center;
   background-size: cover;
   position: relative;
 }
+
+.fixed {
+  height: 100vh;
+  display: none;
+}
+
+.Options2 {
+  position: relative;
+  position: fixed;
+  left: 10%;
+  top: 5%;
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  width: 75vw;
+  height: 55px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+}
+
+.optionsquestion {
+  position: relative;
+  left: 10px;
+}
+
+.responsivenavbar {
+  display: flex;
+  width: 100vw;
+  height: 85px;
+  position: relative;
+  top: 88%;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+}
+
+.search {
+  position: relative;
+  right: 20px;
+  line-height: 25px;
+}
+
+.search i {
+  position: relative;
+  left: 25%;
+  color: red;
+}
+
+.heart {
+  line-height: 25px;
+}
+
+.heart i {
+  position: relative;
+  left: 25%;
+  color: red;
+}
+
+.user {
+  position: relative;
+  left: 20px;
+  line-height: 25px;
+}
+
+.user i {
+  position: relative;
+  left: 25%;
+  color: red;
+}
 nav {
   display: flex;
   padding: 2% 5%;
   justify-content: space-between;
   align-items: center;
+  background-color: black;
 }
 
 nav img {
@@ -99,82 +171,137 @@ nav img {
 
 .sub-menu {
   display: none;
+  position: absolute;
+  background-color: white;
+  z-index: 100;
+  top: 120%;
+  width: 150%;
+  right: 0;
+  border-radius: 20px;
+}
+.nav-links .sub-menu ul li a {
+  color: black;
 }
 
-.barsANDuser:hover .sub-menu {
+.click {
   display: block;
 }
 
-.barsANDuser:hover .sub-menu a {
-  color: grey;
-}
-.barsANDuser:hover .sub-menu a:hover {
-  color: black;
+.nav-links .sub-menu ul li a:hover {
+  color: rgb(68, 67, 67);
 }
 
 /* Options Query */
 
-.options-query {
-  width: 80%;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -110%);
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  border: 5px solid white;
-  border-radius: 25px;
-  background: rgb(233, 211, 211);
+.Options-container {
+  position: relative;
+  width: 100vw;
+  height: 100px;
+  background-color: black;
 }
+
 .Options {
-  flex: auto;
-  display: inline-block;
-  text-decoration: none;
-  color: rgb(5, 5, 7);
-  border: 5px solid white;
-  border-radius: 3px;
-  font-size: 15px;
-  font-weight: bold;
-  background: white;
+  display: flex;
+  margin: auto;
+  background-color: aliceblue;
+  width: 800px;
+  height: 73px;
+  align-items: center;
+  line-height: 25px;
+  font-size: 20px;
+  border-radius: 26px;
+}
+
+.Options span {
+  color: grey;
+}
+
+.options-1 {
+  width: 250px;
+  height: 73px;
+  border-right: 0.3px solid rgb(201, 199, 199);
   cursor: pointer;
 }
 
-a.Options:hover {
-  background-color: rgb(212, 212, 212);
-  border: 5px solid rgb(212, 212, 212);
-  transition: 0.3s;
+.options-1 p {
+  transform: translate(15px, 10px);
 }
 
-#options-date-time {
+.options-2 {
+  width: 150px;
+  height: 73px;
+  border-right: 0.3px solid rgb(201, 199, 199);
+  cursor: pointer;
+  position: relative;
+}
+
+.options-2 p {
+  transform: translate(15px, 10px);
+}
+
+.options-3 {
+  width: 150px;
+  height: 73px;
+  border-right: 0.3px solid rgb(201, 199, 199);
+  cursor: pointer;
+}
+
+.options-3 p {
+  transform: translate(15px, 10px);
+}
+
+.options-4 {
+  display: flex;
+  justify-content: space-evenly;
+  width: 250px;
+  height: 73px;
+  cursor: pointer;
+}
+
+.options-4 p {
+  transform: translateY(10px);
+}
+.search-glass {
+  position: relative;
+  transform: translate(20px, 5px);
+  height: 60px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgb(228, 146, 160);
+  cursor: pointer;
+}
+
+.search-glass i {
+  color: white;
+}
+
+input#checkintime {
+  width: 120px;
+  height: 20px;
+  position: relative;
+  left: 10%;
+  top: 10%;
   display: none;
 }
 
-#options-date-time2 {
+.options-2:hover input#checkintime {
+  display: block;
+}
+
+input#checkouttime {
+  width: 120px;
+  height: 20px;
+  position: relative;
+  left: 10%;
+  top: 10%;
   display: none;
 }
 
-#optionsCheck-in {
-  text-decoration: none;
-  color: black;
-}
-
-#optionsCheck-out {
-  text-decoration: none;
-  color: black;
-}
-
-#optionscheckinMain:hover #options-date-time {
+.options-3:hover input#checkouttime {
   display: block;
-}
-#optionscheckinMain2:hover #options-date-time2 {
-  display: block;
-}
-
-#magnifying-glass.Options {
-  background: rgb(223, 94, 94);
-  border: rgb(223, 94, 94);
-  border-radius: 9px;
 }
 
 .text-box {
@@ -204,10 +331,6 @@ a.Options:hover {
   cursor: pointer;
 }
 
-#heart {
-  visibility: hidden;
-}
-
 /* Gift cards */
 
 .gift {
@@ -229,10 +352,17 @@ a.Options:hover {
 .shopnow-text {
   text-align: center;
   transform: translate(-28%, 70%);
-  font-size: 22px;
 }
+
+.shopnow-text h4 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
 .shopnow-text h1 {
-  font-size: 50px;
+  font-size: 70px;
+  color: rgb(29, 27, 27);
+  font-family: "Roboto", sans-serif;
 }
 
 .shop-btn {
@@ -263,14 +393,19 @@ a.shop-btn:hover {
 .inspiration-text h2 {
   font-family: "Ubuntu", sans-serif;
   font-size: xx-large;
-  position: relative;
-  left: 2.2%;
+  text-indent: 30px;
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+}
+.flex-1,
+.flex-2,
+.flex-3,
+.flex-4 {
+  margin: 5px;
 }
 
 .inspiration-text-1 {
@@ -290,6 +425,7 @@ a.shop-btn:hover {
   color: white;
   font-weight: bolder;
   font-size: x-large;
+  cursor: pointer;
 }
 
 .inspiration-text-1 h4 span {
@@ -315,6 +451,7 @@ a.shop-btn:hover {
   color: white;
   font-weight: bolder;
   font-size: x-large;
+  cursor: pointer;
 }
 
 .inspiration-text-2 h4 span {
@@ -340,6 +477,7 @@ a.shop-btn:hover {
   color: white;
   font-weight: bolder;
   font-size: x-large;
+  cursor: pointer;
 }
 
 .inspiration-text-3 h4 span {
@@ -365,6 +503,7 @@ a.shop-btn:hover {
   color: white;
   font-weight: bolder;
   font-size: x-large;
+  cursor: pointer;
 }
 
 .inspiration-text-4 h4 span {
@@ -427,30 +566,36 @@ a.shop-btn:hover {
 .discovery {
   min-height: 100vh;
   width: 90vw;
+  box-sizing: border-box;
 }
 
 .discovery #discovery-discover {
-  transform: translate(1%, 0);
+  position: relative;
+  left: 40px;
+  color: rgb(26, 24, 24);
 }
 
 .discovery-layout {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  position: relative;
+  left: 10px;
 }
 
 .discovery-1 {
-  min-height: 70vh;
-  width: 45vw;
-  margin-left: 10px;
+  height: 373px;
+  width: 450px;
   background-image: url(./images/thingsForTrip.png);
   background-repeat: no-repeat;
   background-size: cover;
+  margin: 10px;
 }
-.discovery-1-content {
-  transform: translate(10%, 10%);
-}
+
 .discovery-1 h1 {
   color: white;
+  position: relative;
+  left: 15px;
 }
 
 .experiences-btn {
@@ -462,6 +607,8 @@ a.shop-btn:hover {
   padding: 12px 34px;
   background-color: white;
   border-radius: 9px;
+  position: relative;
+  left: 15px;
 }
 
 a.experiences-btn:hover {
@@ -471,19 +618,18 @@ a.experiences-btn:hover {
 }
 
 .discovery-2 {
-  min-height: 70vh;
-  width: 45vw;
-  margin-left: 100px;
+  height: 373px;
+  width: 450px;
   background-image: url(./images/ThingsForHome.png);
   background-repeat: no-repeat;
   background-size: cover;
-}
-.discovery-2-content {
-  transform: translate(10%, 10%);
+  margin: 10px;
 }
 
 .discovery-2 h1 {
   color: white;
+  position: relative;
+  left: 15px;
 }
 
 .online-experiences-btn {
@@ -494,6 +640,8 @@ a.experiences-btn:hover {
   padding: 12px 34px;
   background-color: white;
   border-radius: 9px;
+  position: relative;
+  left: 15px;
 }
 
 a.online-experiences-btn:hover {
@@ -506,7 +654,8 @@ a.online-experiences-btn:hover {
 
 .future-getaways {
   min-height: 45vh;
-  width: 95vw;
+  width: 98vw;
+  box-sizing: border-box;
 }
 .getaways-options {
   display: flex;
@@ -528,7 +677,7 @@ a.online-experiences-btn:hover {
 
 .cities-options {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .cities-options h3 {
@@ -536,18 +685,27 @@ a.online-experiences-btn:hover {
   font-style: italic;
   font-weight: normal;
   cursor: pointer;
+  font-size: 18px;
 }
 
 .future-getaways hr {
   font-weight: lighter;
+  width: 85vw;
 }
 
 /* Footer */
 
 .footer {
   min-height: 35vh;
-  width: 95vw;
-  background-color: rgba(241, 241, 241, 0.9);
+  width: 98vw;
+  background: rgb(239, 238, 245);
+  background: linear-gradient(
+    90deg,
+    rgba(239, 238, 245, 1) 0%,
+    rgba(255, 255, 255, 1) 35%,
+    rgba(221, 249, 255, 1) 100%
+  );
+  box-sizing: border-box;
 }
 .contact-options {
   display: flex;
@@ -556,19 +714,22 @@ a.online-experiences-btn:hover {
 .contact-options a {
   text-decoration: none;
   color: black;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-.help-list {
-  display: flex;
-  justify-content: space-between;
-}
-
-.help-list h3 {
-  font-weight: 300;
   font-size: 1.1em;
+  line-height: 2.5em;
+}
+
+.contact-options h3 {
+  font-weight: 300;
+  font-size: 1em;
   cursor: pointer;
+  line-height: 2em;
+}
+
+.footer hr {
+  width: 50vw;
+  color: rgb(255, 205, 205);
+  position: relative;
+  margin-left: 25%;
 }
 
 /*
@@ -578,35 +739,38 @@ Links
 */
 
 .links {
-  min-height: 7vh;
-  width: 95vw;
-  background-color: rgba(241, 241, 241, 0.808);
-}
-
-.links-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  min-height: 12vh;
+  width: 100vw;
+  background-color: rgba(241, 241, 241, 0.808);
+  box-sizing: border-box;
+}
+
+.links a {
+  text-decoration: none;
+  color: black;
 }
 
 .link-options-text {
-  transform: translate(0%, 40%);
-  text-align: left;
+  width: 420px;
 }
-
 .link-options-text a {
-  text-decoration: none;
-  color: gray;
-  margin-left: 15px;
+  margin-left: 10px;
 }
 
-.link-options-icons {
-  display: flex;
-  width: 10%;
-  justify-content: space-evenly;
+.links-options-usd a {
+  margin-right: 12px;
 }
-.link-options-icons i {
-  margin-right: 10px;
-  margin-top: 10px;
+
+.links-options-icons {
+  width: 200px;
+  display: flex;
+  position: relative;
+  right: 5%;
+  justify-content: space-evenly;
+  font-size: 1.3em;
 }
 
 /* Media queries */
@@ -617,55 +781,62 @@ Links
 *
 */
 
-@media (max-width: 700px) {
-  * {
-    margin: 0;
-    padding: 0;
-  }
-
+@media (max-width: 1070px) {
   nav img {
     display: none;
   }
+}
 
-  .nav-links {
-    position: absolute;
-    background: #ffffff;
-    height: 6vh;
-    width: 100vw;
-    bottom: 0;
-    flex: 1;
-  }
-
-  .nav-links ul li {
-    display: inline-block;
-  }
-  .nav-links ul li a {
+@media (max-width: 850px) {
+  nav {
     display: none;
   }
 
-  #heart {
-    visibility: visible;
+  .Options-container {
+    display: none;
+  }
+
+  .fixed {
+    display: block;
+  }
+
+  .text-box {
+    z-index: 0;
+  }
+
+  .Options2 {
+    z-index: 1;
     cursor: pointer;
-    padding-right: 100px;
-    border: 9px solid white;
-    border-radius: 25px;
-    background-color: white;
   }
 
-  #bars1 {
+  .responsivenavbar {
+    z-index: 1;
+  }
+
+  .responsivenavbar .fa {
+    cursor: pointer;
+  }
+
+  .responsivegift {
+    width: 90vw;
+    height: 70vh;
+    background: rgb(239, 238, 245);
+    background: linear-gradient(
+      90deg,
+      rgba(239, 238, 245, 1) 0%,
+      rgba(197, 197, 224, 1) 35%,
+      rgba(138, 159, 215, 1) 100%
+    );
+    position: relative;
+    left: 5%;
+    z-index: -1;
+  }
+
+  .shopnow-text {
+    transform: translate(2%, 260%);
+  }
+
+  .links-options-icons {
     display: none;
-  }
-
-  /*Search tab */
-  .options-query {
-    transform: translate(-10%, -380%);
-    position: sticky;
-  }
-
-  .Options {
-    visibility: hidden;
-  }
-  #magnifying-glass {
-    visibility: visible;
   }
 }
